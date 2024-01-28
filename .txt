@@ -1,0 +1,5 @@
+const spyMathPow = jest.spyOn(Math, 'pow');
+
+test('проверка кол-ва вызовов', () => {
+  expect(spyMathPow).toBeCalledTimes(2)
+});

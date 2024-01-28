@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fech tests Ожидаемый результат 1`] = `
+[
+  "1",
+  "2",
+]
+`;
