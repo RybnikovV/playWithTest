@@ -1,0 +1,75 @@
+const spyMathPow = jest.spyOn(Math, 'pow');
+
+test('проверка кол-ва вызовов', () => {
+  expect(spyMathPow).toBeCalledTimes(2)
+});
+
+Test
+Об тестировании
+  виды тестирования
+    Виды функционального
+      e2e - должен занимать наименьшее кол-во тестов(10%) - сценарннные(фуннкциональность)
+      integration - промежуточный обьем(20-30%) - тесты в связке
+      unit - наибольшее кол-во тестов(к 100%)
+    Виды нефункиональных тестов 
+      скриншотные тесты(70-80%)
+      нагрузочные
+      регрессионное тестирование
+
+  инструменты
+    jest
+    react-testing-library
+    webdriverIO
+    storybook + loki
+  
+  Термины
+    регрессионое тестирование
+
+
+  1. unit test:
+    test('testName', () => {
+      expect(fnName().toBe())
+    })
+    test('testName', () => {
+      expect(fnName().toBeLessThan())
+    })
+    test('testName', () => {
+      expect(fnName().toBeUndefined())
+    })
+
+
+    describe('name, fn => {
+      beforeEach(() => {
+
+      })
+      beforeAll(() => {
+
+      })
+      test...
+      test...
+      test('testName', () => {
+        expect(fnName(fnName()).toEqual(objValue))
+      })
+      test('testName', () => {
+        expect(fnName(fnName()).not.toEqual(objValue))
+      })
+      cosnt spyMathPow = jest.spyOn(Math, 'pow')
+      test('testName', () => {
+        expect(spyMathPow).toBeCalledTimes(num) //Mock Testing
+      })
+      ...test
+      afterEach(() => {
+        jest.clarAllMocks()
+      })
+      afterAll(() => {
+
+      })
+    })
+
+    //примеры проверок асинхронных ф-ций
+    describe('delay' () => {
+      test('Проверка асинхронной функции', async () => {
+        const sum = await functionName(() => 5 + 5, 1000)
+        expect(sum).toBe(10)
+      })
+    })
