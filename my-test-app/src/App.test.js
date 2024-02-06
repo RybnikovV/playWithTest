@@ -13,9 +13,7 @@ describe('Тестирование компонента App', () => {
     );
     // const promo = screen.getByText(/and save to reload/i);
     const helloWorld = screen.queryByText(/hello world/i);
-    const linkAsyncList = screen.getByTestId('to-async-list');
     const linkForm = screen.getByTestId('to-form');
-    const linkPosts = screen.getByTestId('to-post');
     expect(screen.getByTestId('main-page')).toBeInTheDocument();
     fireEvent.click(linkForm);
     // userEvent.click(linkForm);

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const FetchList = () => {
   const [posts, setPosts] = useState(null);
@@ -26,10 +27,11 @@ export const FetchList = () => {
     <ul>
       {
         posts ? posts.map(post => {
-          return (<li key={post.id}
+          return (<Link key={post.id}
+                    to={`/post/${post.id}`}
                     data-testid="post-item">
                     {post.title}
-                  </li>)
+                  </Link>)
         }) : null
       }
     </ul>
